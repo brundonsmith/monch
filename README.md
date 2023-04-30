@@ -11,7 +11,7 @@ A tasty TypeScript parser-combinator library, inspired by Rust's
 - Works on Node (with types stripped), Deno, Bun, and even in the browser
   (with types stripped)
 
-### Usage
+## Usage
 
 ```typescript
 // JSON parser
