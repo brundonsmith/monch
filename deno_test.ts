@@ -1,3 +1,7 @@
+/**
+ * Tests for CI, run using `deno test`
+ */
+
 import { assertEquals } from "https://deno.land/std@0.171.0/testing/asserts.ts";
 
 import { Parser, char, exact, filter, input, manySep0, map, numericChar, oneOf, optional, required, take0, take1, tuple, whitespace } from "./index.ts"
