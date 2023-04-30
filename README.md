@@ -7,7 +7,7 @@ A tasty TypeScript parser-combinator library, inspired by Rust's
 ## Features
 - Small and practical (but easy to extend!)
 - Zero dependencies
-- Rich tyoe inference for parsed value types and error types
+- Rich type inference for parsed value types and error types
 - Works on Node (with types stripped), Deno, Bun, and even in the browser
   (with types stripped)
 
