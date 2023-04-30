@@ -1,0 +1,23 @@
+{
+    "name": "monch",
+    "version": "1.0.0",
+    "description": "A tasty TypeScript parser-combinators library",
+    "main": "index.js",
+    "scripts": {
+        "transpile": "npx esbuild index.ts --outfile=index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brundonsmith/monch.git"
+    },
+    "keywords": [
+        "parsing",
+        "parser-combinators"
+    ],
+    "author": "Brandon Smith",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brundonsmith/monch/issues"
+    },
+    "homepage": "https://github.com/brundonsmith/monch#readme"
+}
