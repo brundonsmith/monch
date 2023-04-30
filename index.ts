@@ -143,16 +143,16 @@ export const map = <TParsed, TError, TMapped>(
 
 /**
  * Require that the parser finds something and not nothing, erroring if nothing
- * is parsed. Optional callback can be passed to generate a custom error message.
+ * is parsed. `error` callback is passed to generate error messages.
  */
 export const required = <TParsed, TError1, TError2>(
     parser: Parser<TParsed, TError1>,
-    error?: (input: ParseInput) => TError2
+    error: (input: ParseInput) => TError2
 ): Parser<TParsed, TError1 | TError2> => input => {
     const res = parser(input)
 
     if (res == null) {
-        return { kind: 'error', input, error: error != null ? error(input) : 'Failed to parse' }
+        return { kind: 'error', input, error: error(input) }
     } else {
         return res
     }
