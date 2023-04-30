@@ -8,8 +8,17 @@ A tasty TypeScript parser-combinator library, inspired by Rust's
 - Small and practical (but easy to extend!)
 - Zero dependencies
 - Rich type inference for parsed value types and error types
-- Works on Node (with types stripped), Deno, Bun, and even in the browser
-  (with types stripped)
+- Works on Node, Deno, Bun, and even the browser
+  
+## Installation
+```
+npm install monch-parse
+```
+or
+
+```
+import { } from 'https://deno.land/x/monch@latest/index.ts'
+```
 
 ## Usage
 
