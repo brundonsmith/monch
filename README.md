@@ -17,7 +17,7 @@ npm install monch-parse
 or
 
 ```
-import { } from 'https://deno.land/x/monch@v1.0.1/index.ts'
+import { } from 'https://deno.land/x/monch@v1.0.2/index.ts'
 ```
 
 ## Usage

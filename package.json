@@ -1,6 +1,6 @@
 {
     "name": "monch-parse",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A tasty TypeScript parser-combinators library",
     "main": "index.js",
     "scripts": {

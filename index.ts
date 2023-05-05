@@ -299,7 +299,23 @@ export const many1 = <TParsed, TError>(item: Parser<TParsed, TError>): Parser<TP
 /**
  * Parse 0 or more characters, where `chParser` is a 1-character parser, returned as a single string
  */
-export const take0 = <TError>(chParser: Parser<string, TError>): Parser<string, TError> => map(many0(chParser), chars => chars.join(''))
+export const take0 = <TError>(charParser: Parser<string, TError>): Parser<string, TError> => input => {
+    let nextInput = input
+    let res = ''
+
+    while (true) {
+        const charResult = charParser(nextInput)
+
+        if (charResult == null) {
+            return { kind: 'success', parsed: res, input: nextInput, src: { code: input.code, start: input.index, end: nextInput.index } }
+        } else if (charResult.kind === 'error') {
+            return charResult
+        } else {
+            nextInput = charResult.input
+            res += charResult.parsed
+        }
+    }
+}
 
 /**
  * Parse 1 or more characters, where `chParser` is a 1-character parser, returned as a single string
